@@ -8,16 +8,11 @@ export default class Splash extends  Component{
     };
     componentWillMount()
     {
-        setInterval(()=>{
+        setTimeout(()=>{
             this.props.navigation.navigate('main')
         },2000)
     }
-    componentWillUnmount()
-    {
-        setInterval(()=>{
-            this.props.navigation.navigate('main')
-        },2000)
-    }
+
     constructor() {
         super();
         this.state = {
@@ -32,7 +27,7 @@ export default class Splash extends  Component{
             <View style={{ flex:1,
                 flexDirection:'column',
                 justifyContent:'center',
-            backgroundColor:'#79bdeb'
+            backgroundColor:'white'
             }}>
 
 

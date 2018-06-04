@@ -23,6 +23,7 @@ export default class Loginscr extends Component {
                 <Text key={1} style={styles.Textstyle}>
                     UserName/Email@
                 </Text>
+
                 <TextInput key={1}
                     style={styles.inputstyle}>
                 </TextInput>

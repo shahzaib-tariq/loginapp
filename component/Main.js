@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import Button from 'react-native-button';
 
 export default class Main extends Component {
-    //
-    // static navigationOptions ={
-    //     title:"main"
-    // }
+
+    static navigationOptions ={
+        header:null
+    };
 
 render() {
     return (
@@ -37,13 +37,22 @@ render() {
                     onPress={() => this.props.navigation.navigate("signup")}>Sign up!
             </Button>
 
-            <Text style={{
+            <Text key={1} style={{
                 color: 'blue',
                 fontSize: 15,
                 margin: 40
             }}
                   onPress={() => this.props.navigation.navigate("login")}>
                 Forgot password ?
+
+            </Text>
+            <Text key={2} style={{
+                color: 'blue',
+                fontSize: 15,
+                margin: 40
+            }}
+                  onPress={() => this.props.navigation.navigate("DrawOpen")}>
+                Drawer
 
             </Text>
 
