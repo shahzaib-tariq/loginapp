@@ -1,4 +1,4 @@
-import { View ,Navigator,Text,Image} from 'react-native';
+import { View ,Navigator,Text,Image,BackHandler} from 'react-native';
 import React, { Component } from 'react';
 import Button from 'react-native-button';
 
@@ -7,12 +7,15 @@ export default class Main extends Component {
     static navigationOptions ={
         header:null
     };
+    exit_function = () => {
+        BackHandler.exitApp();
+    };
 
 render() {
     return (
         <View style={{
             flex: 2,
-            justifyContent: 'center',
+            justifyContent: 'space-between',
             alignItems: 'center',
             flexDirection: 'column',
             backgroundColor: 'white'
@@ -21,6 +24,10 @@ render() {
 
 
             </Image>
+            <Image key={2} style={{width: 50, height: 50}} source={require('../download.jpg')}>
+
+
+        </Image>
 
             <Button key={1} style={{
                 color: 'green',
@@ -37,26 +44,26 @@ render() {
                     onPress={() => this.props.navigation.navigate("signup")}>Sign up!
             </Button>
 
-            <Text key={1} style={{
+             <Text key={1} style={{
                 color: 'blue',
                 fontSize: 15,
                 margin: 40
             }}
-                  onPress={() => this.props.navigation.navigate("login")}>
+                  onPress={() => this.props.navigation.navigate("ForgetPassword")}>
                 Forgot password ?
 
             </Text>
-            <Text key={2} style={{
-                color: 'blue',
-                fontSize: 15,
-                margin: 40
+            
+            <Button key={3} style={{
+                color: 'red',
+                fontSize: 20,
             }}
-                  onPress={() => this.props.navigation.navigate("DrawOpen")}>
-                Drawer
+                    onPress={this.exit_function}>Exit!
+            </Button>
 
-            </Text>
 
         </View>
+
     );
 }
 };

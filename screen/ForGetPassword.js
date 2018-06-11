@@ -4,7 +4,7 @@ import Button from 'react-native-button';
 
 export default class Signupscr extends Component {
     static navigationOptions = {
-        title: "Signup"
+        title: "Forget password !"
     };
 
     render() {
@@ -14,7 +14,7 @@ export default class Signupscr extends Component {
 
                 <Image style={{alignItems:'center',
                     justifyContent:'center'}}   source={require('../singuplogo.jpg')}
-                      >
+                >
 
                 </Image>
 
@@ -22,28 +22,28 @@ export default class Signupscr extends Component {
                     User Name
                 </Text>
                 <TextInput key={1}
-                    style={styles.inputstyle}>
+                           style={styles.inputstyle}>
                 </TextInput>
 
                 <Text key={2} style={styles.Textstyle}>
                     Email
                 </Text>
                 <TextInput key={2}
-                    style={styles.inputstyle}>
+                           style={styles.inputstyle}>
                 </TextInput>
 
                 <Text key={3} style={styles.Textstyle}>
-                Password
+                    Password
                 </Text>
                 <TextInput key={3}
-                    style={styles.inputstyle}>
+                           style={styles.inputstyle}>
                 </TextInput>
 
                 <Text key={4} style={styles.Textstyle}>
-                   Confirm password
+                    Confirm password
                 </Text>
                 <TextInput key={4}
-                    style={styles.inputstyle}>
+                           style={styles.inputstyle}>
                 </TextInput>
 
 
@@ -53,7 +53,7 @@ export default class Signupscr extends Component {
                     fontSize: 30,
 
                 }}
-                        onPress={() => this.props.navigation.navigate("account")}>Sign up!
+                        onPress={() => this.props.navigation.navigate("account")}>Update!
                 </Button>
             </View>
 
@@ -62,27 +62,27 @@ export default class Signupscr extends Component {
     }
 }
 
-    const styles = StyleSheet.create({
-        container: {
-            flex: 1,
-            justifyContent: 'center',
-            flexDirection: 'column',
-            alignItems: 'center',
-            backgroundColor: 'white',
-        },
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        justifyContent: 'center',
+        flexDirection: 'column',
+        alignItems: 'center',
+        backgroundColor: 'white',
+    },
 
-        Textstyle: {
-            fontSize: 20,
-            textAlign: 'center',
-            margin: 10,
-           color:'black',
-        },
+    Textstyle: {
+        fontSize: 20,
+        textAlign: 'center',
+        margin: 10,
+        color:'black',
+    },
 
-        inputstyle:
-            {
-                height: 50,
-                fontSize:30,
-                borderColor: 'gray',
-                borderWidth: 1
-            },
-    });
+    inputstyle:
+        {
+            height: 50,
+            fontSize:30,
+            borderColor: 'gray',
+            borderWidth: 1
+        },
+});

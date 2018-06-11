@@ -27,10 +27,19 @@ export default class Splash extends  Component{
             <View style={{ flex:1,
                 flexDirection:'column',
                 justifyContent:'center',
+                alignItems:'center',
             backgroundColor:'white'
             }}>
 
+                {/*<Image*/}
+                    {/*key={2} style={{width:100, height: 100,}} source={require('../RS-MInion-001-169x300.jpg')}>*/}
 
+                {/*</Image>*/}
+
+            <Image
+                key={2} style={{width: 50, height: 50,}} source={require('../download.jpg')}>
+
+                </Image>
 
                 <Text style={{fontSize:40,
                     backgroundColor:'transparent',

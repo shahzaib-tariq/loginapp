@@ -6,8 +6,9 @@ import Splash from './component/Splash';
 import Main from './component/Main';
 import Loginscr from './screen/Loginscr';
 import Signupscr from './screen/Signupscr';
-import Firstscr from  './screen/Firstscr';
-
+import AlbumList from './screen/AlbumList';
+import Account from './screen/Account';
+import ForGetPassword from './screen/ForGetPassword';
 
 const Navigation =StackNavigator({
     Home:{
@@ -22,9 +23,13 @@ const Navigation =StackNavigator({
     signup:{
         screen:Signupscr
     },
-    first:{
-        screen:Main
+    account:{
+        screen:AlbumList
+    },
+    ForgetPassword:{
+        screen:ForGetPassword
     }
+
 
 
 });

@@ -5,6 +5,7 @@ import Button from 'react-native-button';
 export default class Loginscr extends Component {
     static navigationOptions = {
         title: "login"
+
     };
 
     render() {
@@ -36,10 +37,12 @@ export default class Loginscr extends Component {
                     style={styles.inputstyle}>
                 </TextInput>
 
-                <Button key={1} style={{
-                    color: 'blue',
+                <Button key={3} style={{
+                    color: 'green',
                     fontSize: 30,
-                }}>Login!
+
+                }}
+                        onPress={() => this.props.navigation.navigate("account")}>Login !
                 </Button>
             </View>
 
